@@ -71,7 +71,7 @@ function Login() {
     }
 
 
-    if (resposta.status === "success") {
+    if (resposta.mensagem === "Usuário cadastrado") {
       navigate("/loja");
     }
   };

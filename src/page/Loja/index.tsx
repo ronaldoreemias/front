@@ -38,7 +38,7 @@ function Login() {
       return;
     }
     
-    if (resposta.status === "success") {
+    if (resposta.mensagem === "Login bem-sucedido") {
       localStorage.setItem("token", resposta.token);
       navigate("/Forum");
     }
