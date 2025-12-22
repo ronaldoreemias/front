@@ -21,7 +21,7 @@ function Login() {
       return;
     }
 
-    const promessa = await fetch("https://45223778-160a-4e48-a3a5-3f6b4cc349a3-00-29mcaw9lpfo4i.picard.replit.dev/", {
+    const promessa = await fetch("https://45223778-160a-4e48-a3a5-3f6b4cc349a3-00-29mcaw9lpfo4i.picard.replit.dev/login.php", {
       method: "POST",
       body: formData,
     });
