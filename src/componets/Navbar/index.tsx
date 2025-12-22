@@ -18,7 +18,7 @@ function Navbar() {
         </div>
         <div className={Style.pesquisa}>
           <a href="https://axiosn-oticias.vercel.app/">
-              <h4>Home</h4>
+              <h4>Notícias</h4>
           </a>
           <a href="https://axiosn-oticias.vercel.app/Notficacao">
               <h4>Sistema</h4>
@@ -27,7 +27,7 @@ function Navbar() {
               <h4>Loja</h4>
           </a>
           <a href="https://axiosn-oticias.vercel.app/Vagas">
-              <h4>Vagas</h4>
+              <h4>Vagas de empregos</h4>
           </a>
         </div>
         <div className={Style.links}>

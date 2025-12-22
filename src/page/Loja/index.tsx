@@ -2,6 +2,7 @@ import Navbar from "../../componets/Navbar/index";
 import Style from "./Loja.module.css";
 import { useState} from "react";
 import { useNavigate } from "react-router-dom"
+import Swal from 'sweetalert2';
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -17,11 +18,15 @@ function Login() {
     formData.append("senha", senha);
 
     if(email === "" || senha === ""){
-      alert("Por favor, preencha todos os campos.");
+      Swal.fire({ 
+        title: 'Error!', 
+        text: 'Por favor, preencha todos os campos', 
+        icon: 'error', 
+     });
       return;
     }
 
-    const promessa = await fetch("https://45223778-160a-4e48-a3a5-3f6b4cc349a3-00-29mcaw9lpfo4i.picard.replit.dev/login.php", {
+    const promessa = await fetch("https://backend--lolitarebeca3.replit.app/login.php", {
       method: "POST",
       body: formData,
     });
@@ -30,11 +35,20 @@ function Login() {
     setMensagem(resposta.mensagem);
   
     if(resposta.mensagem === "Entrada inválida"){
-      alert("Sua entrada é suspeita, tem certeza que quer fazer isso ?. embre-se que posso rastrear você.");
+      Swal.fire({ 
+        title: 'Error!', 
+        text: 'Sua entrada é suspeita, tem certeza que quer fazer isso ?. embre-se que posso rastrear você.', 
+        icon: 'error', 
+     });
       return;
     }
     if(resposta.mensagem === "Entrada muito longa"){
-      alert("suas entradas são longas de mais, acho que você está tentando fazer algo suspeito.... Tô de olho em você.");
+      Swal.fire({ 
+        title: 'Error!', 
+        text: 'suas entradas são longas de mais, acho que você está tentando fazer algo suspeito.... Tô de olho em você.', 
+        icon: 'error', 
+     });
+      
       return;
     }
     
@@ -45,23 +59,43 @@ function Login() {
   };
 
   return (
+    
     <form className={Style.forme} onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="e-mail ou nick-name"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+      <div className={Style.titulo}>
+        <h1>Login</h1>
+        <p>versão Beta</p>
+      </div>
+      <br/>
+      <div className={Style.input}>
+        <label>
+          Email cadastrado
+        
+        <input
+          type="text"
+          placeholder="e-mail"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        </label>
+      </div>
       <br />
-      <input
-        type="password"
-        placeholder="sua senha"
-        value={senha}
-        onChange={(e) => setSenha(e.target.value)}
-      />
+      <div className={Style.input}>
+        <label>
+            Senha
+          </label>
+          <input
+            type="password"
+            placeholder="sua senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+      </div>
       <br />
-      <button type="submit">entrar</button>
-      <p>{mensagem}</p>
+      <div className={Style.botoes}>
+        <button type="submit">entrar</button>
+      <a href="/Cadastrar" >Cadastrar</a>
+      </div>
+    <p className={Style.mensagem}>{mensagem}</p>
     </form>
   );
 }
@@ -76,13 +110,17 @@ function Loja() {
      <div className={Style.body}>
         <div className={Style.container}>
           <div className={Style.header}>
-            <h2>Bem vindo a versão Beta 2.0.0</h2>
+            <div className={Style.texto}>
+              <h1>Fórum versão Beta 2.0.0</h1>
+              <h2>Seja bem vindo ao Axios</h2>
+              <p>Desenvolvido para você que quer apreder 
+                e evoluir na área de tecnologia, se manter atualizado com as últimas notícias do mundo tech, tirar suas duvidas e encontrar comunidades.
+              </p>
+              <p>Faça login para acessar o fórum Axios</p>
+            </div>
           </div>
           <div className={Style.content}>
           <Login />  
-          </div>
-          <div className={Style.footer}>
-            <h4>ainda não tem cadastro ? <a href="/Cadastrar" >Click aqui</a></h4>
           </div>
         </div>
      </div>
