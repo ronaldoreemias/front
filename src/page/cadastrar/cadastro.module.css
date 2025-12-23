@@ -14,7 +14,7 @@
   grid-template-columns: 1fr 3fr;
   gap: 3px;
   padding: 5px;
-  margin-top: 5%;
+  margin-top: 3%;
   width: 40%;
 }
 .container div {
@@ -46,8 +46,14 @@
   align-items: center;
   background: #f9f9f9; /* fundo suave */
   padding: 20px;
+  border: solid 1px rgba(36, 35, 35, 0.363);
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* leve sombra */
+}
+
+.titulo {
+  background-color: #cccccc00;
+  border-radius: 10px
 }
 
 .forme input {

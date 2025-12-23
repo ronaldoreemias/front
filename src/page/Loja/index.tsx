@@ -95,7 +95,9 @@ function Login() {
         <button type="submit">entrar</button>
       <a href="/Cadastrar" >Cadastrar</a>
       </div>
-    <p className={Style.mensagem}>{mensagem}</p>
+   <div className={Style.areamensagem} >
+       <p className={Style.mensagem}>{mensagem}</p>
+   </div>
     </form>
   );
 }
@@ -111,12 +113,33 @@ function Loja() {
         <div className={Style.container}>
           <div className={Style.header}>
             <div className={Style.texto}>
-              <h1>Fórum versão Beta 2.0.0</h1>
-              <h2>Seja bem vindo ao Axios</h2>
-              <p>Desenvolvido para você que quer apreder 
-                e evoluir na área de tecnologia, se manter atualizado com as últimas notícias do mundo tech, tirar suas duvidas e encontrar comunidades.
-              </p>
-              <p>Faça login para acessar o fórum Axios</p>
+              <h1>* Fórum versão Beta 2.0.0 *</h1>
+              
+              <pre className={Style.codeBlock}><code>
+                evolução {'{'}
+                  <span className={Style.comment}>/* seu futuro começa aqui*/</span>
+                  <span className={Style.str}>   align-items: center;</span>
+                  <span className={Style.str}>   tire suas duvidas</span>
+                  <span className={Style.str}>   entre em cominidades</span>
+                  <span className={Style.str}>   compartilhe seus projetos</span>
+                  <span className={Style.str}>   fazer networking</span>
+                {'}'}
+                <br/>
+                <code>
+                function Axios() {'{'}
+                  <span className={Style.keyword}>     return (</span> 
+                  
+                    const evolução =  <span className={Style.str}>"evoluir nunca esteve tão perto" ;</span>  
+                  );
+                  <br/>
+                {'}'}
+                </code>
+                </code>
+                
+                </pre>
+              <br/>
+              <br/>
+              <h3>ainda estou fazendo manutenção no site inteiro, mas está ficando com uma cara legal.</h3>
             </div>
           </div>
           <div className={Style.content}>

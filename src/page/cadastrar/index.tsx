@@ -78,6 +78,11 @@ function Login() {
 
   return (
     <form className={Style.forme} onSubmit={handleSubmit}>
+      <div className={Style.titulo}>
+        <h1>Cadastro</h1>
+      </div>
+      <br/>
+
       <input
         type="text"
         placeholder="nick-name"
