@@ -1,4 +1,4 @@
-import Navbar from "../../componets/Navbar/index";
+import Navbar from "../../componets/NavbarForum/index";
 import Style from "./forum.module.css";
 import Postagemarea from "../../componets/postarareaforum/index";
 

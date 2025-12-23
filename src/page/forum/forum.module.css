@@ -1,7 +1,6 @@
 .container {
   display: grid;
   grid-template-areas:
-    "footer footer footer"
     "menu header content"
     "menu feed content";
   grid-template-columns: 1fr 2fr 1fr;
@@ -31,8 +30,8 @@
 
 .container div.footer {
   grid-area: footer;
-  display: flex;
-  justify-content: end;  
+  display: none;
+  
 }
 
 
@@ -70,8 +69,8 @@
 }
 
 .container div.footer {
+  display: block;
   grid-area: footer;
-  text-align: center;
   background-color: white;
 }
 
