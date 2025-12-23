@@ -1,21 +1,21 @@
 .container {
   display: grid;
   grid-template-areas:
+    "footer footer footer"
     "menu header content"
-    "menu feed content"
-    "footer footer footer";
-  grid-template-columns: 1fr 3fr 1fr;
+    "menu feed content";
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 3px;
   background-color: dodgerblue;
   padding: 5px;
 }
 .container div {
   background-color: white;
-  padding: 10px;
+ 
 }
 .container div.header {
   grid-area: header;
-  text-align: center;
+  padding: 3px;
 }
 .container div.menu {
   grid-area: menu;
@@ -26,9 +26,53 @@
 
 .container div.feed {
   grid-area: feed;
+  height: 70vh;
 }
 
 .container div.footer {
   grid-area: footer;
-  text-align: center;  
+  display: flex;
+  justify-content: end;  
+}
+
+
+@media(max-width: 700px){
+.container {
+  display: grid;
+  grid-template-areas:
+    "footer "
+    " feed "
+    " header ";
+  grid-template-columns: 1fr ;
+  gap: 3px;
+  background-color: dodgerblue;
+  padding: 5px;
+}
+
+.container div.header {
+  grid-area: header;
+  padding: 3px;
+  height: 50px;
+}
+
+.container div.menu {
+  grid-area: menu;
+  display: none;
+}
+.container div.content {
+  grid-area: content;
+  display: none;
+}
+
+.container div.feed {
+  grid-area: feed;
+  height: 70vh;
+}
+
+.container div.footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: white;
+}
+
 }

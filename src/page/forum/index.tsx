@@ -1,5 +1,6 @@
 import Navbar from "../../componets/Navbar/index";
 import Style from "./forum.module.css";
+import Postagemarea from "../../componets/postarareaforum/index";
 
 function sair(){
   localStorage.removeItem("token");
@@ -14,7 +15,7 @@ function Forum() {
       <Navbar />
       <div className={Style.container}>
         <div className={Style.header}>
-          <h2>My Header</h2>
+          <Postagemarea />
         </div>
         <div className={Style.menu}>
           <a href="#">Link 1</a>
@@ -30,10 +31,9 @@ function Forum() {
           <h3>Feed</h3>
         </div>
         <div className={Style.footer}>
-          <h4>Footer</h4>
+          <button onClick={sair}>sair</button>
         </div>
       </div>
-      <button onClick={sair}>sair</button>
      
     </div>
   );
