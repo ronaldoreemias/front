@@ -49,7 +49,7 @@
 .codeBlock{
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   background: #1e1e2a; /* VSCode-like editor background */
   color: #d4d4d4;
   font-family: 'Fira Code', 'Courier New', monospace;
